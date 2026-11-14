@@ -56,7 +56,7 @@ If credentials are missing/invalid, the API returns the precise reason (e.g. `Gm
 | server | `JWT_SECRET`, `JWT_EXPIRES_IN` | JWT signing (also keys the OTP HMAC) |
 | server | `CLIENT_URL` | allowed frontend origin(s), comma separated. **Must exactly match the browser origin** (e.g. `https://my-app.vercel.app`, no path): it is used for CORS and CSRF origin validation |
 | server | `COOKIE_SAMESITE` | optional `lax`/`strict`/`none` (default `lax` dev, `none` prod) |
-| server | `EMAIL_USER` | **must be exactly `matrucareai@gmail.com`**; any other value is rejected (`EMAIL_SENDER_MISMATCH`) so the sender identity cannot change silently |
+| server | `EMAIL_USER` | **must be exactly `sameergaurgkp@gmail.com`**; any other value is rejected (`EMAIL_SENDER_MISMATCH`) so the sender identity cannot change silently |
 | server | `EMAIL_PASS` | Gmail App Password |
 | server | `MONGO_URI_TEST` | optional, tests only: use this database instead of the in-memory one |
 | server | `DISABLE_RATE_LIMIT` | tests only; never set in production |
