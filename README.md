@@ -43,7 +43,7 @@ On start the server logs `[mail] SMTP connection verified` or the exact reason i
 - Atlas: create a free cluster → Database Access user → Network Access (allow your IP / Render's) → Connect → Drivers → copy the `mongodb+srv://…` string into `MONGO_URI`.
 
 ## Gmail App Password
-1. Sign in to the matrucareai@gmail.com Google account → Security → enable **2-Step Verification**.
+1. Sign in to the sameergaurgkp@gmail.com Google account → Security → enable **2-Step Verification**.
 2. Open https://myaccount.google.com/apppasswords → create an app password (name e.g. "MatruCare server").
 3. Copy the 16-character password into `EMAIL_PASS` in `server/.env` (spaces are ignored). Never commit it.
 If credentials are missing/invalid, the API returns the precise reason (e.g. `Gmail rejected the credentials…`) and nothing is reported as sent.
@@ -77,7 +77,7 @@ All responses: `{ success, message, data? }`; errors may include `errors` (field
 | GET `/api/hackathon/my-entry` | ✔ | `data.registration` or `null` |
 | POST `/api/hackathon/:id/resend-confirmation` | ✔ owner | retry a failed confirmation email (403 if not owner, 409 if already sent, 429 within 60 s of last attempt, 502 if SMTP fails again; max 5/hour) |
 | DELETE `/api/hackathon/:id` | ✔ owner | delete own registration |
-| POST `/api/contact` | ✔ | send message to matrucareai@gmail.com |
+| POST `/api/contact` | ✔ | send message to sameergaurgkp@gmail.com |
 | GET `/api/health` | – | health check |
 
 ## Editing event content
@@ -99,7 +99,7 @@ Dark cinematic event look, defined in `client/tailwind.config.js` and `client/sr
   1. Every POST/PUT/PATCH/DELETE under `/api` has its `Origin` (or `Referer`) validated against `CLIENT_URL`; a request with a cookie but no Origin/Referer is rejected.
   2. Authenticated writes must send `X-CSRF-Token`, an HMAC bound to the session JWT. The SPA receives it in the JSON body of `POST /api/auth/login` and `GET /api/user/me` (unreadable cross-site because of CORS) and keeps it in memory. This is compatible with the Vercel `/api` proxy because the browser's Origin stays the frontend origin.
 - **OTP:** HMAC-hashed, 10-min expiry, single use, 5 wrong attempts, 60 s cooldown shared by signup and resend (repeat signups cannot bypass it).
-- **Email identity:** always `MatruCare AI <matrucareai@gmail.com>`; a mismatching `EMAIL_USER` is refused.
+- **Email identity:** always `MatruCare AI <sameergaurgkp@gmail.com>`; a mismatching `EMAIL_USER` is refused.
 - **Errors:** all errors use `{ success:false, message, code?, errors?, retryAfter? }`. Unknown errors return a generic 500 and are logged server-side only; models never serialise password/OTP fields or raw SMTP error text.
 
 ## Testing
