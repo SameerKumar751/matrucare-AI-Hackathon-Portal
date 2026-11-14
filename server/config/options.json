@@ -1,0 +1,17 @@
+{
+  "courses": ["B.Tech", "M.Tech", "BCA", "MCA", "BSc", "MSc", "BBA", "MBA", "Diploma", "Other"],
+  "branches": ["CSE", "IT", "ECE", "EEE", "ME", "CE", "AI & ML", "Data Science", "Other"],
+  "years": ["1st Year", "2nd Year", "3rd Year", "4th Year"],
+  "domains": ["AI/ML", "Web Development", "IoT", "Cyber Security", "Blockchain", "Mobile App Development", "Healthcare Tech", "Other"],
+  "colleges": [
+    "Indian Institute of Technology (IIT)",
+    "National Institute of Technology (NIT)",
+    "Indian Institute of Information Technology (IIIT)",
+    "Dr. A.P.J. Abdul Kalam Technical University affiliated college",
+    "University of Lucknow",
+    "Integral University",
+    "Amity University",
+    "Other (not listed)"
+  ],
+  "teamSizes": [1, 2, 3, 4, 5]
+}
