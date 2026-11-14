@@ -9,7 +9,7 @@ A MERN application where participants sign up, verify their email with an OTP, l
 - Dashboard with profile, verification status, saved registration, team and confirmation-email status
 - Registration form (all 14 fields), dynamic team members (team size 1–5, leader counts as one), client + server validation, one registration per user (unique index)
 - Confirmation email with project, domain, college, team and links
-- Contact form → email to matrucareai@gmail.com
+- Contact form → email to sameergaurgkp@gmail.com
 - CSRF protection (Origin/Referer validation + session-bound CSRF token), Helmet, CORS with credentials, NoSQL-injection sanitising, rate limiting, central error handling that never leaks internals
 - Failed confirmation emails can be retried by the registration owner from the dashboard (no duplicate registration)
 
