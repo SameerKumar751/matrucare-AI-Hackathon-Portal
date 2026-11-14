@@ -1,6 +1,6 @@
 # MatruCare AI – Hackathon Registration Portal
 
-A MERN application where participants sign up, verify their email with an OTP, log in to a dashboard and register for the hackathon with full team management. Emails are sent through Nodemailer (Gmail SMTP) as **MatruCare AI &lt;matrucareai@gmail.com&gt;**.
+A MERN application where participants sign up, verify their email with an OTP, log in to a dashboard and register for the hackathon with full team management. Emails are sent through Nodemailer (Gmail SMTP) as **MatruCare AI &lt;sameergaurgkp@gmail.com&gt;**.
 
 ## Features
 - Signup (bcrypt-hashed password) → 6-digit OTP email → verification → login
